@@ -1,26 +1,37 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="main">
+    <ntHeader />
+    <ntPage />
+  </div>
 </template>
-
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ntHeader from "@/components/ntHeader";
+import ntPage from "@/components/ntPage";
 
 export default {
-  name: 'App',
+  data() {
+    return {
+      text: '123',
+    }
+  },
   components: {
-    HelloWorld
+    ntHeader,
+    ntPage
   }
 }
 </script>
 
 <style>
+body {
+  margin: 0;
+  padding: 0;
+  background: #f8f9fa;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
